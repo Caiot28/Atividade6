@@ -82,8 +82,8 @@ main(){
         printf("Codigo da bebida errado.");
 
     }
+    
     TotalCalorias = CaloriasPrato + CaloriasBebida + CaloriasSobrem;
-
     printf("O total de calorias e: %d", TotalCalorias);
 
 }
