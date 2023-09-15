@@ -2,48 +2,60 @@
 
 main(){
 
-    int Pedido, Qtd;
-    float ValorTotal;
+    int Pedido, Qtd, novoLanche;
+    float ValorTotal, ValorLanche;
 
-    printf("Digite o numero do pedido: ");
+    do {
+    printf("\nCardapio: 100 - Cachorro quente = 10,10 \n 101 - Bauru simples = 8,30 \n 102 - Bauru com ovo = 8,50 \n 103 - Hamburguer = 12,5 \n 104 - Cheeseburguer = 13,25\n");
+    printf("Digite o pedido: ");
     scanf("%d", &Pedido);
 
     printf("Digite a quantidade: ");
     scanf("%d", &Qtd);
 
+
+    
     switch(Pedido) {
 
         case 100:
-            ValorTotal = Qtd * 10.10;
-            printf("O valor do pedido e: %.2f", ValorTotal);
+            ValorLanche = 10.10;
+            ValorTotal += Qtd * ValorLanche;            
             break;
 
         case 101:
-            ValorTotal = Qtd * 8.30;
-            printf("O valor do pedido e: %.2f", ValorTotal);
+            ValorLanche = 8.30;
+            ValorTotal += Qtd * ValorLanche; 
             break;
 
         case 102:
-            ValorTotal = Qtd * 8.50;
-            printf("O valor do pedido e: %.2f", ValorTotal);
+            ValorLanche = 8.50;
+            ValorTotal += Qtd * ValorLanche; 
             break;
 
         case 103:
-            ValorTotal = Qtd * 12.50;
-            printf("O valor do pedido e: %.2f", ValorTotal);
+            ValorLanche = 12.50;
+            ValorTotal += Qtd * ValorLanche; 
             break;
 
         case 104:
-            ValorTotal = Qtd * 13.25;
-            printf("O valor do pedido e: %.2f", ValorTotal);
+            ValorLanche = 13.25;
+            ValorTotal += Qtd * ValorLanche; 
             break;
-
         default:
-            printf("O codigo do item pedido esta errado.");
-
-
-
+        printf("\nLanche nao encontrado");
 
     }
+
+    printf("\nDeseja adicionar outro item? 0 - Nao / 1 - Sim\n");
+
+    scanf("%d", &novoLanche);
+
+
+    } while (novoLanche != 0);
+
+    printf("\nValor final: %.2f", ValorTotal);
+
+
+
 
 }
